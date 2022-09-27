@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Будет линейная компоновка элементов, окно на весь экран,
+     компоненты должны располагаться вертикально и по-центру экрана -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TableLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:stretchColumns="*">
+
+        <TableRow>
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_span="6"
+                android:layout_height="100dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/androidify"
+                android:contentDescription="@string/logo" />
+
+            <!-- Поле ввотда текста c шириной в 10 букв "М",
+                 с авторазмером по высоте, любые символы
+                 и сверху отступ в 5 dp -->
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="17dp">
+            <TextView
+                android:id="@+id/textView_a"
+                android:layout_height="35dp"
+                android:background="#212121"
+                android:layout_marginRight="7dp"
+                android:gravity="center"
+                android:text="@string/a"
+                android:textColor="#ffd536" />
+
+            <EditText
+                android:id="@+id/editText_a"
+                android:layout_height="wrap_content"
+                android:autofillHints="no"
+                android:hint="@string/a"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/textView_b"
+                android:layout_height="35dp"
+                android:background="#212121"
+                android:layout_marginRight="7dp"
+                android:gravity="center"
+                android:text="@string/b"
+                android:textColor="#ffd536" />
+
+            <EditText
+                android:id="@+id/editText_b"
+                android:layout_height="wrap_content"
+                android:autofillHints="no"
+                android:hint="@string/b"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/textView_x"
+                android:layout_height="35dp"
+                android:background="#212121"
+                android:layout_marginRight="7dp"
+                android:gravity="center"
+                android:text="@string/x"
+                android:textColor="#ffd536" />
+
+            <EditText
+                android:id="@+id/editText_x"
+                android:layout_height="wrap_content"
+                android:autofillHints="no"
+                android:hint="@string/x"
+                android:inputType="textPersonName" />
+        </TableRow>
+
+        <TableRow>
+            <Button
+                android:id="@+id/buttonSum"
+                android:layout_span="6"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:onClick="onClick"
+                android:text="@string/sum" />
+
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/textView_sum"
+                android:layout_span="6"
+                android:layout_height="wrap_content"
+                android:text="@string/button_name"
+                android:textColor="#25675A"
+                android:gravity="center"/>
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>
